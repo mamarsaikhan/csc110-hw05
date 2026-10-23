@@ -1,22 +1,42 @@
 """
-Name: (put your name here)
+Name: Marla Amarsaikhan
 Peers: (add any collaborators)
 References: (anything you checked to solve this)
 """
 
 def get_letter():
-    """ Add your own Docstring """
+    """Asks until the user gives A, B, or C, then returns it. """
     # remove the default return and add your code
-    return ""
-
+    while True:
+        text = input("Give me a single uppercase letter: ")
+        # needs to be exactly one character
+        if len(text) != 1:
+            print("Error: it needs to be a single character.")
+            continue
+        # needs to be A, B, or C
+        if not (text == "A" or text == "B" or text == "C"):
+            print("Error: You provided the wrong character.")
+            continue
+        # passed both checks
+        return text
+            
 def get_digit():
-    """ Add your own Docstring """
+    """Asks until the user gives 1, 2, or 3, then returns it as a string."""
     # remove the default return and add your code
-    return 0
-
-
+    while True:
+        text = input("Give me an single number character: ")
+        # needs to be only digits
+        if not text.isdigit():
+            print("Error: your input should be only digits.")
+            continue
+        # needs to be exactly 1, 2, or 3
+        if not (text == "1" or text == "2" or text == "3"):
+            print("Error: a single digit needs to be in [1,3].")
+            continue
+        return text
+        
 def check_pattern(letter, digit, lst):
-    """ Add your own Docstring """
+    """ """
     # remove the default pass and add your code
     pass
 
