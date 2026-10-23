@@ -39,7 +39,7 @@ def check_pattern(letter, digit, lst):
     """Prints the words in lst where letter appears before digit."""
     # remove the default pass and add your code
     print("Strings with the pattern:")
-    #outer loop: one word at a time"
+    # outer loop: one word at a time"
     for word in lst:
         letter_found = False
         # inner loop: one character at a time
@@ -74,8 +74,17 @@ def main ():
     # ADD YOUR CODE UNDER THIS LINE
     # -------------------------------------------------
 
-    # Your code Here
-
+    while True:
+        # tasks 1 and 2: get the user's letter and digit
+        letter = get_letter()
+        digit = get_digit()
+        # task 3: print the matching words
+        check_pattern(letter, digit, st_list)
+        # stop unless the user replies with y
+        answer = input("Try Again? (y/n): ")
+        if answer != "y":
+            break
+        
     # -------------------------------------------------
     # No need to modify anything Below this line
     print("The End")
