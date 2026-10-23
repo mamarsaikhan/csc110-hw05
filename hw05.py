@@ -36,11 +36,23 @@ def get_digit():
         return text
         
 def check_pattern(letter, digit, lst):
-    """ """
+    """Prints the words in lst where letter appears before digit."""
     # remove the default pass and add your code
-    pass
-
-
+    print("Strings with the pattern:")
+    #outer loop: one word at a time"
+    for word in lst:
+        letter_found = False
+        # inner loop: one character at a time
+        for ch in word:
+            if ch == letter:
+                letter_found = True
+            # digit found after the letter
+            elif ch == digit and letter_found:
+                print(word, end=" ")
+                break
+    # end the line of matches
+    print()
+        
 #  The function main is INCOMPLETE, you must finish it
 # before you submit
 def main ():
